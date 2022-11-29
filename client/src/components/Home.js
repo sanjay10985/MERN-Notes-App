@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+import Notes from "./notes/Notes";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <h1>Hello Home</h1>
+      <Notes />
     </div>
   );
 };

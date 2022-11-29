@@ -24,6 +24,8 @@
     padding: 1.3em;
     font-size: 1.2em;
     transition: background-color .2s;
+    border-bottom-left-radius: 3em;
+    border-bottom-right-radius: 3em;
 }
 
 #main-nav li a:hover{
