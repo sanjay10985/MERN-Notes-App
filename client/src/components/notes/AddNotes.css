@@ -1,0 +1,56 @@
+.addNotesbox {
+  width: 80%;
+  margin: auto;
+  padding: 2em 4em;
+  display: flex;
+}
+
+.addNotes-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+
+#title {
+  width: 0;
+}
+
+.desc-input {
+  width: 100%;
+}
+
+#description {
+  resize: none;
+
+  height: max-content;
+  width: 100%;
+  padding-top: 0.2em;
+  font-size: 1em;
+  padding-left: 0.4em;
+  border: none;
+  max-height: 80vh;
+  outline: none;
+}
+
+.addNote-icons-div {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  background-color: rgb(78, 30, 210);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -1em;
+  right: -0.5em;
+}
+
+.addNot-icons {
+  /* background-color: black; */
+  font-size: 2em;
+  color: white;
+}
