@@ -3,19 +3,43 @@
   margin: auto;
   padding: 2em 4em;
   display: flex;
+  justify-content: center;
 }
 
 .addNotes-form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   border: 1px solid black;
   position: relative;
   overflow: hidden;
+  opacity: 1;
+  display: none;
 }
 
 #title {
-  width: 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 0.6em;
+  display: none;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.display-animation {
+  display: block !important;
+  animation: fade_in 0.5s;
+}
+
+@keyframes fade_in {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
 }
 
 .desc-input {
@@ -29,14 +53,14 @@
   width: 100%;
   padding-top: 0.2em;
   font-size: 1em;
-  padding-left: 0.4em;
+  padding-left: 0.8em;
   border: none;
   max-height: 80vh;
   outline: none;
 }
 
 .addNote-icons-div {
-  position: absolute;
+  /* position: absolute; */
   border: 1px solid black;
   border-radius: 50%;
   width: 4em;
@@ -47,10 +71,31 @@
   align-items: center;
   top: -1em;
   right: -0.5em;
+  transition: transform 0.2s;
+}
+
+.addNote-icons-div:hover {
+  transform: translateY(-0.2em);
 }
 
 .addNot-icons {
   /* background-color: black; */
   font-size: 2em;
   color: white;
+}
+
+.icon-remove {
+  opacity: 0 !important;
+  z-index: -20;
+  filter: blur(10);
+  transition: all 0.3s;
+}
+
+@keyframes remove_display {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
 }
